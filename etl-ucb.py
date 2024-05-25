@@ -12,3 +12,17 @@ wine_quality_data = pd.read_csv(wine_quality_url, sep=";")
 # Initial look at the data
 print(wine_data.head())
 print(wine_quality_data.head())
+
+
+# Transformation
+# 
+
+
+
+
+
+
+# Loading
+# Saving the transformed data as a csv file
+wine_data.to_csv('wine_dataset.csv', index = False)
+wine_quality_data.to_csv('wine_quality_dataset.csv', index = False) 
