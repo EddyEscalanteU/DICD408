@@ -31,7 +31,7 @@ print(wine_quality_data.isnull().sum())
 # Normalizing 'alcohol' column in the wine_data using Min-Max normalization
 wine_data['alcohol'] = (wine_data['alcohol'] - wine_data['alcohol'].min()) / (wine_data['alcohol'].max() - wine_data['alcohol'].min())
 
-
+wine_data['alcohol'] = wine_data['alcohol'] * 10
 
 # Loading
 # Saving the transformed data as a csv file
@@ -42,3 +42,4 @@ wine_quality_data.to_csv('wine_quality_dataset.csv', index = False)
 
 # Live Share VS Code
 # https://prod.liveshare.vsengsaas.visualstudio.com/join?2164B09DADFF4C0820305BF4BF8865BCC21C
+# https://prod.liveshare.vsengsaas.visualstudio.com/join?5685C665E8F5745FAC49D461DEAD76679157
