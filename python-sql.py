@@ -1,6 +1,4 @@
-
 import pyodbc
-
 
 server = 'DOCENTE_UCB.mssql.somee.com'
 database = 'DOCENTE_UCB'
@@ -13,9 +11,7 @@ connection  = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};\
                       DATABASE='+database+';\
                       UID='+username+';\
                       PWD='+ password)
-
-#connection = pyodbc.connect('DRIVER={SQL Server};SERVER=DOCENTE_UCB.mssql.somee.com;#DATABASE=DOCENTE_UCB;UID=EddyEscalanteU_SQLLogin_1;PWD=gp882v1wbz')                      
-
+            
 cursor = connection.cursor()
 
 query = "select * from productos"
