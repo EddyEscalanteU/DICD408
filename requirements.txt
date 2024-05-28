@@ -1,0 +1,2 @@
+pyodbc
+pip install python-dotenv
