@@ -16,22 +16,10 @@ BEGIN
   );
 END;
 
-
-IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'track')
-BEGIN
-  CREATE TABLE [track] (
-    id VARCHAR(50) PRIMARY KEY,
-    playlist_id TEXT,
-    artist_id TEXT,
-    album_id TEXT,
-    name TEXT
-  );
-END;
-
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'album')
 BEGIN
   CREATE TABLE [album] (
-    id VARCHAR(50) PRIMARY KEY,
+    id VARCHAR(50),-- PRIMARY KEY,
     name TEXT
   );
 END;
@@ -39,8 +27,36 @@ END;
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'artist')
 BEGIN
   CREATE TABLE [artist] (
-    id VARCHAR(50) PRIMARY KEY,
+    id VARCHAR(50),-- PRIMARY KEY,
     name TEXT
   );
 END;
 
+IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'track')
+BEGIN
+  CREATE TABLE [track] (
+    id VARCHAR(50),
+    playlist_id VARCHAR(50),
+    artist_id VARCHAR(50),
+    album_id VARCHAR(50),
+    name TEXT,
+	--PRIMARY KEY(id, playlist_id, artist_id, album_id)
+  );
+END;
+
+
+
+
+		drop table [user];drop table [playlist];drop table [track];drop table [album];drop table [artist]
+
+
+
+
+
+
+
+select * from [user]
+select * from [playlist]
+select * from [track]
+select * from [album]
+select * from [artist]
